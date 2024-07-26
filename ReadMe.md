@@ -25,7 +25,7 @@ One would normally use the loss type of "segment" if you want to do pixel-wise s
 The "reconstruction" will try to just reconstruct the rgb label as the output (which is not super useful in most cases, and is not tested).
 
 ```
-python3 script_train.py --datadir <path_to_data> --batch_size 4 --num_gpu 1 --losstype segment
+python3 script_train.py --datadir <path_to_data> --batch_size 16 --num_gpu 1 --losstype segment
 ```
 
 
@@ -43,12 +43,47 @@ I found that the valuation dataset gave around 0.947 while the training gave 0.9
 python3 script_test.py --datadir <path_to_data> --batch_size 4
 ```
 
+## Converting .pkl to .pt Format
+To convert a model saved in .pkl format to .pt format, use the pkl2pt.py script. Modify the paths in the script as needed before running it.
 
+1. Open pkl2pt.py in a text editor.
+2. Ensure the paths for loading the .pkl file and saving the .pt file are correct.
+3. Run the script with Python:
+   
+```
+python3 pkl2pt.py
+```
 
+## Checking Model Channels
+To check the input and output channels of the convolutional layers in the U-Net model, use the check_channel.py script.
 
+1. Open check_channel.py in a text editor.
+2. Ensure the path to the .pt model is correct.
+3. Run the script with Python:
+   
+```
+python3 check_channel.py
+```
 
+## Converting .pt to INT8 Format
+To convert a .pt model to INT8 format, use the pt2int8.py script.
 
+1. Open pt2int8.py and review the script for any necessary modifications to paths or parameters.
+2. Run the script with Python:
 
+```
+python3 pt2int8.py
+```
+
+## Model Evaluation
+To evaluate the models, use the evaluate_models.py script.
+
+1. Open evaluate_models.py and review the script for any necessary modifications to paths or parameters.
+2. Run the script with Python:
+   
+```
+python3 evaluate_models.py
+```
 ## Credits
 
 
