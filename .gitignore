@@ -4,7 +4,8 @@ predict
 unet.pkl
 unet_loss
 *.pkl
-
+model_prepared.pth
+unet.pt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
