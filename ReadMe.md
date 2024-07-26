@@ -13,7 +13,7 @@ To find the classification for a given pixel, the argmax of the classes response
 Before saving to disk, I convert this classid back into a rgb color to allow for visual comparison to the groundtruth labels.
 I found that the network prediction gave ok visual results after four epochs.
 
-
+**I have used the Quantization Aware Training (QAT) method to quantize the 32-bit U-Net model into an INT8 model. The evaluation code showed that the accuracy of the INT8 model did not decrease compared to the original 32-bit model.**
 
 
 
