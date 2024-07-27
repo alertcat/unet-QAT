@@ -15,7 +15,7 @@ I found that the network prediction gave ok visual results after four epochs.
 
 **I have used the Quantization Aware Training (QAT) method to quantize the 32-bit U-Net model into an INT8 model. The evaluation code showed that the accuracy of the INT8 model did not decrease compared to the original 32-bit model.**
 
-
+**The model file is in the releases.**
 
 ## Training the Model
 
